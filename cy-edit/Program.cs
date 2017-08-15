@@ -40,12 +40,10 @@ namespace MDTroubleReport
                 String folder = args[0];
 
                 if (args.Length == 2)
-                    ProcessMDFiles(args[0], args[1], false);
-                if (args.Length == 3)
                 {
+                    ProcessMDFiles(args[0], args[1], false);
                     Console.WriteLine("");
-                    Console.WriteLine("Parameter values: " + args[0] + " " + args[1] + " " + args[2]);
-
+                    Console.WriteLine("Parameter values: " + args[0] + " " + args[1] );
                 }
             }
             catch (DirectoryNotFoundException dnf)
