@@ -31,8 +31,7 @@ namespace MDTroubleReport
                 Console.WriteLine("Syntax: doc-yaml-editor <FOLDER> <TAG> <VALUE>");
                 Console.WriteLine("------------------------------------------");
                 Console.WriteLine("FOLDER - The location where yaml metadata is applied. The tag update is applie to all .md files in this folder, AND its subfolders.");
-                Console.WriteLine("TAG - OPTIONAL. The name of the tag to update. It is the left side of the format such as 'tag: value'");
-                Console.WriteLine("VALUE - REQUIRED if TAG supplied. The value to apply to the tag. The argument is treated as a string. Do not quote the string value. If the value is an empty string, then the tag will be removed. If an existing tag is found, it will be updated with this new value");
+                Console.WriteLine("JOB -  The name of the job to run. Choices include 'job', 'alt-text'");
                 return;
             }
 
@@ -82,7 +81,7 @@ namespace MDTroubleReport
                     if ((fi.Attributes & FileAttributes.Directory) != FileAttributes.Directory)
                     {
 
-                        switch (job)
+                        switch (job.ToLower())
                         {
                             case "pipe":
                                 PipeSymbols pipeSymbols = new PipeSymbols(fi);
