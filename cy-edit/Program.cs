@@ -28,9 +28,9 @@ namespace MDTroubleReport
             if (args.Length == 0)
             {
                 Console.WriteLine("");
-                Console.WriteLine("Syntax: doc-yaml-editor <FOLDER> <TAG> <VALUE>");
+                Console.WriteLine("Syntax: MDTroubleReport <FOLDER> <JOB> ");
                 Console.WriteLine("------------------------------------------");
-                Console.WriteLine("FOLDER - The location where yaml metadata is applied. The tag update is applie to all .md files in this folder, AND its subfolders.");
+                Console.WriteLine("FOLDER - The location where the table report is run. The tables are analyzed in all .md files in this folder, AND its subfolders.");
                 Console.WriteLine("JOB -  The name of the job to run. Choices include 'job', 'alt-text'");
                 return;
             }
